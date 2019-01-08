@@ -9,8 +9,8 @@ class Recipe extends Component {
   }  
   componentDidMount = () => {
     const title = this.props.location.state.recipe;  
-    const req = await fetch(`https://www.food2fork.com/api/search?key=${API_KEY}&q=${title}`); //to chet localhost denided response use http://cors-anywhere.herokuapp.com/ just before https://www.food2fork.....//
-    const res = await req.json();
+    const req = fetch(`https://www.food2fork.com/api/search?key=${API_KEY}&q=${title}`);
+    const res = req.json();
     this.setState({ activeRecipe: res.recipes[0]});
   }
 
