@@ -13,7 +13,7 @@ class App extends Component {
   getRecipe = async (e) => {     //construktor (){this.getRecipe = this.getRecipe.bind() } -----new version of React, min 16
     const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
-    const api_call = await fetch(`http://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=10`);
+    const api_call = await fetch(`https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=10`);
     //to chet localhost denided response use http://cors-anywhere.herokuapp.com/ just before https://www.food2fork.....
     const data = await api_call.json();
 
@@ -23,21 +23,24 @@ class App extends Component {
   componentDidMount = () => {
     const json = localStorage.getItem("recipes");
     const recipes = JSON.parse(json);
-    this.setState({ recipes: recipes }); // if the name and the key are the same> {recipes: recipes} > we can write it this way
+    this.setState({ recipes}); // if the name and the key are the same> {recipes: recipes} > we can write it this way
+    console.log(this.state.recipes);
   }
   componentDidUpdate = () => {
     const recipe = JSON.stringify(this.state.recipes);
-    localStorage.setItem("recipes", recipes);
+    localStorage.setItem("recipes", recipe);
   }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Recipe Search</h1>
+          <div className="header_container">
+            <h1 className="App-title">RECIPEsearch</h1>
+            <Form getRecipe={this.getRecipe} />
+          </div>
         </header>
-        <Form getRecipe={this.getRecipe} />
-        {/* <Recipes recipes={this.state.recipes}/> */}
+        <Recipes recipes={this.state.recipes}/>
       </div>
     );
   }
