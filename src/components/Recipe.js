@@ -8,30 +8,38 @@ class Recipe extends React.Component {
         activeRecipe: []
     }
     componentDidMount = async () => {
-        const title = this.props.location.state.recipe;
-        const req = await fetch(`http://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${title}`);
+        const id = this.props.match.params.id;
+        console.log(this.props.match.params.id);
+        const req = await fetch(`http://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/get?key=${API_KEY}&rId=${id}`);
         const res = await req.json();
 
         this.setState({
-            activeRecipe: res.recipes[0]
+            activeRecipe: res.recipe
         });
-        console.log(this.state.activeRecipe);
+        console.log(res);
     }
     render(){
         const recipe = this.state.activeRecipe;
         return (
-            <div className="container">
+            <div className="container-recipe">
                 {this.state.activeRecipe.length !== 0 && 
                     <div className="active-recipe">
                         <img className="active-recipe__img" src={recipe.image_url} alt={recipe.title}/>
                         <div className="active-recipe_container">   
                             <h3 className="active-recipe__title">{recipe.title}</h3>
-                            <h4 className="active-recipes__publisher">
+                            <h4 className="active-recipes__subtitle">
                                 Publisher: <span>{recipe.publisher}</span>
                             </h4>
-                            <p className="active-recipe__website">
+                            <h4 className="active-recipes__subtitle">
                                 Website: <span><a href={recipe.publisher_url}>{recipe.publisher_url}</a></span>
-                            </p>
+                            </h4>
+                            <h4 className="active-recipes__subtitle">ingredients:</h4>
+                            <ul className="active-recipes__ingredients">{recipe.ingredients.map((ingredient)=>{
+                                return(
+                                    <li key={ingredient}>{ingredient}</li>
+                                )})
+                            }
+                                </ul>
                             <button className="active-recipe__button">
                                 <Link to="/">Go back</Link>
                             </button>

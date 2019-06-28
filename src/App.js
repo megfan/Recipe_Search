@@ -13,12 +13,10 @@ class App extends Component {
   getRecipe = async (e) => {     //construktor (){this.getRecipe = this.getRecipe.bind() } -----new version of React, min 16
     const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
-    const api_call = await fetch(`https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=10`);
-    //to chet localhost denided response use http://cors-anywhere.herokuapp.com/ just before https://www.food2fork.....
+    const api_call = await fetch(`https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=20`);
     const data = await api_call.json();
 
     this.setState({ recipes: data.recipes});
-    console.log(this.state.recipes);
   }
   componentDidMount = () => {
     const json = localStorage.getItem("recipes");
@@ -36,7 +34,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <div className="header_container">
-            <h1 className="App-title">RECIPEsearch</h1>
+            <h1 className="App-title"><span>RECIPE</span> search</h1>
             <Form getRecipe={this.getRecipe} />
           </div>
         </header>
