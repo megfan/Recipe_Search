@@ -8,6 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background:#f3f3f3;
 }
+<<<<<<< HEAD
 :root{
   --main: #ff5868;
 }
@@ -18,6 +19,12 @@ img {
 
 a {
   color: #ff5868 !important;
+=======
+
+a {
+  color: #e74c3c;
+  text-decoration: none;
+>>>>>>> 8b055bbda3625654002f66f3bd9f60b9db993d18
 }
 
 button:focus {
@@ -28,7 +35,8 @@ button:focus {
   text-align: center;
 }
 .container{
-  max-width: 80vw;
+  max-width: 98vw;
+  margin: 0 auto;
 }
 
 .App-header {
@@ -55,11 +63,20 @@ button:focus {
   font-family: Montserrat !important;
   font-weight: 900;
 }
+<<<<<<< HEAD
 .App-title span{
   color: var(--main);
 }
 
 .recipe_buttons {
+=======
+.beer_list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.beer_buttons {
+>>>>>>> 8b055bbda3625654002f66f3bd9f60b9db993d18
   border: solid 2px #d2d2d2;
   background: transparent;
   padding: 0.5rem 1.5rem;
@@ -71,18 +88,19 @@ button:focus {
   font-family: Montserrat;
 }
 
-.recipes__box {
+.beers__box {
   background: #fff;
+  width: 40vw;
   padding-bottom: 2rem;
   border-radius: 20px;
   text-align: left;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
-  height: 100%;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
 }
+<<<<<<< HEAD
 .recipes__box:hover{
   box-shadow: -1px 10px 50px -10px rgba(0,0,0,0.3);
 }
@@ -92,13 +110,32 @@ button:focus {
 
 .recipes__title {
   color: var(--main);
+=======
+.beer__box_img{
+  width: 150px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 250px;
+  padding: 1rem;
+}
+.beer__text {
+  margin: 0 2rem;
+}
+.beer-img{
+  object-fit: contain;
+}
+
+.beers__title {
+  color: #ff5868;
+>>>>>>> 8b055bbda3625654002f66f3bd9f60b9db993d18
   font-size: 1.1rem;
-  padding: 1rem 0 0.1rem 0;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
   font-family: Merriweather;
 }
 
-.recipes__subtitle {
+.beers__subtitle {
   font-weight: 600;
   font-size: 0.8rem;
   letter-spacing: .4px;
@@ -107,16 +144,13 @@ button:focus {
   color: #393939;
 }
 
-.recipes__subtitle span {
+.beers__subtitle span {
   text-transform: none;
   font-weight: 400;
   font-size: 0.8rem;
   font-family: Montserrat;
   letter-spacing: 1px;
   font-style: italic;
-}
-.recipe__box-img{
-  border-radius: 10px;
 }
 
 .form__input {
@@ -151,8 +185,9 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #2c3e50 !important;
 }
 
-/******** RECIPE.js ********/
+/******** beer.js ********/
 
+<<<<<<< HEAD
 .active-recipe {
   width: 100vw;
   height: 100vh;
@@ -166,19 +201,36 @@ input:-webkit-autofill {
   width: auto;
   height: 100%;
   object-fit: cover;
+=======
+.active-beer {
+  margin: 10vh auto;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.active-recipe__title {
+.active-beer__img {
+  width: auto;
+  height: 50vh;
+  padding: 6rem;
+>>>>>>> 8b055bbda3625654002f66f3bd9f60b9db993d18
+}
+
+.active-name {
   margin: 1rem 0;
   color: #ff5868;
   font-size: 3rem;
   margin-bottom: 2rem;
   font-family: Merriweather
 }
-.active-recipe_container{
+.active-beer_container{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+<<<<<<< HEAD
   margin: 0 7vw;
   min-width: 30%;
 }
@@ -190,11 +242,26 @@ input:-webkit-autofill {
 }
 
 .active-recipes__subtitle span, .active-recipes__subtitle span a {
+=======
+  margin-right: 5rem;
+}
+.active__first_brewed, .active__description {
+  font-weight: 600;
+  font-size: 0.8rem;
+  /* letter-spacing: .4px; */
+  margin-bottom: 0;
+  margin-top: 4px;
+  color: #393939;
+}
+
+.active__first_brewed span {
+>>>>>>> 8b055bbda3625654002f66f3bd9f60b9db993d18
   text-transform: none;
   font-weight: 600;
   margin-left: 5px;
   color: #ff5868;
 }
+<<<<<<< HEAD
 .active-recipes__ingredients{
   color: #393939;
   font-weight: 300;
@@ -204,6 +271,16 @@ input:-webkit-autofill {
   margin-bottom: 5px;
 }
 .active-recipe__button {
+=======
+
+.active__description span {
+  text-transform: lowercase;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.active__button {
+>>>>>>> 8b055bbda3625654002f66f3bd9f60b9db993d18
   border: solid 2px #d2d2d2;
   background: transparent;
   padding: 0.5rem 1.5rem;
