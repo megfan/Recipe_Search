@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from "./components/Form";
 import Recipes from "./components/Recipes";
-import SwiftSlider from 'react-swift-slider'
 
 const API_KEY = '5b42a03277b16e40dd14db8f04da92c6';
-const data =  [
-  {'id':'1','src':'https://images.unsplash.com/photo-1501199846642-3181f389551d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'},
-  {'id':'2','src':'https://images.unsplash.com/photo-1501959915551-4e8d30928317?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'},
-  {'id':'3','src':'https://images.unsplash.com/photo-1506459225024-1428097a7e18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'},
-  {'id':'4','src':'https://images.unsplash.com/photo-1553177595-4de2bb0842b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80'}
-];
+// const slideImages = [
+//   'https://images.unsplash.com/photo-1501199846642-3181f389551d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+//   'https://images.unsplash.com/photo-1501959915551-4e8d30928317?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+//   'https://images.unsplash.com/photo-1506459225024-1428097a7e18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+//   'https://images.unsplash.com/photo-1553177595-4de2bb0842b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80'
+// ];
+
 class App extends Component {
   state ={
     recipes: [],
@@ -39,7 +39,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         <div className="header_slider">
-            <SwiftSlider data={data} showDots={false} enableNextAndPrev={false} interval={3000}/>
+          <img src="https://images.unsplash.com/photo-1501199846642-3181f389551d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt=""/>
           </div> 
           <div className="header_container">
             <div className="header_icons"> 

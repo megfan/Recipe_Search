@@ -105,11 +105,9 @@ button:focus {
   width: 50vw;
   height: 100%;
 }
-.fEidzb{
-  height: 100vh !important;
-}
-.eYhPVL{
-  height: 100vh !important;
+.header_slider img{
+  height: 100%;
+  object-fit: cover;
 }
 form{
   width: 80%
