@@ -45,7 +45,7 @@ class App extends Component {
             <div className="header_icons"> 
               <div className="header_icons_API">
               <a href="https://www.food2fork.com/about/api">API</a></div>
-              <svg class="icon"
+              <svg className="icon"
                 xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 438.549 438.549">
                 <a href="https://github.com/megfan/Recipe_Search">
                   <path d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
@@ -75,7 +75,7 @@ class App extends Component {
               <h1 className="App-title"><span>RECIPE</span> search</h1>
               <Form getRecipe={this.getRecipe} />              
             </div>            
-            <span class="footer__text">Copyright© 2018 Meg Fantom</span>
+            <span className="footer__text">Copyright© 2018 Meg Fantom</span>
           </div>                 
         </header>
         <Recipes recipes={this.state.recipes}/>
