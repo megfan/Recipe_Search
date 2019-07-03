@@ -148,7 +148,7 @@ form{
   align-items: flex-start;
   padding: 2rem;
   flex-direction: column;
-  height: 42vh;
+  height: 45vh;
   border: 1px solid #fff;
   transition: all .5s;
 }

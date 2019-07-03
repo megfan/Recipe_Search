@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 class Recipes extends React.Component {    
     render(){
-     if(this.props.recipes === undefined){
+     if(this.props.recipes === undefined || this.props.recipes === null){
         return null        
     }else{
         return(

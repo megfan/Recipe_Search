@@ -4,12 +4,6 @@ import Form from "./components/Form";
 import Recipes from "./components/Recipes";
 
 const API_KEY = '5b42a03277b16e40dd14db8f04da92c6';
-// const slideImages = [
-//   'https://images.unsplash.com/photo-1501199846642-3181f389551d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-//   'https://images.unsplash.com/photo-1501959915551-4e8d30928317?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-//   'https://images.unsplash.com/photo-1506459225024-1428097a7e18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
-//   'https://images.unsplash.com/photo-1553177595-4de2bb0842b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80'
-// ];
 
 class App extends Component {
   state ={
